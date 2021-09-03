@@ -1,30 +1,34 @@
-# Revature-project-01
+                                                                                  # Revature-project-01
+                                                                                  
 Use Sqoop to collect data and to store the data to HDFS. Process various insights while analyzing the data using Hive. The database consist of movies_dataset  table, I will import movies_dataset table, which contains about movies id, names, year, rating and duration. 
-Making a directory in HDFS
+
+
+                                                                                  # Movies analysis
+## Making a directory in HDFS
 
 hdfs dfs -mkdir '/moviedata/'
 
-Pushing data in HDFS
+## Pushing data in HDFS
 
 hdfs dfs -put '/home/cloudera/Downloads/moviesdataset.txt' '/moviedata/'
 
-Getting started with hive
+## Getting started with hive
 
 hive
 
-Creating a DB
+## Creating a DB
 
 create database movie;
 
-Creating a table
+## Creating a table
 
 create table moviedata (id int, name string, year int, rating float, duration int) > row format delimited > fields terminated by ',' > ;
 
-Loading data into the table
+## Loading data into the table
 
 LOAD DATA INPATH '/moviedata/movies dataset for pig.txt' > INTO TABLE moviedata;
 
-Problem Statements
+## Problem Statements
 
 1.Find the number of movies released between 1950 and 1960.
 
