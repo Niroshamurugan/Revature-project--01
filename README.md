@@ -1,34 +1,33 @@
-                                                                 ## Revature-project-01
+ ## Revature-project-01
                                                                                   
 Use Sqoop to collect data and to store the data to HDFS. Process various insights while analyzing the data using Hive. The database consist of movies_dataset  table, I will import movies_dataset table, which contains about movies id, names, year, rating and duration. 
 
-
-                                                                 ## Movies analysis
-## Making a directory in HDFS
+## Movies analysis
+# Making a directory in HDFS
 
 hdfs dfs -mkdir '/moviedata/'
 
-## Pushing data in HDFS
+# Pushing data in HDFS
 
 hdfs dfs -put '/home/cloudera/Downloads/moviesdataset.txt' '/moviedata/'
 
-## Getting started with hive
+# Getting started with hive
 
 hive
 
-## Creating a DB
+# Creating a DB
 
 create database movie;
 
-## Creating a table
+# Creating a table
 
 create table moviedata (id int, name string, year int, rating float, duration int) > row format delimited > fields terminated by ',' > ;
 
-## Loading data into the table
+# Loading data into the table
 
 LOAD DATA INPATH '/moviedata/movies dataset for pig.txt' > INTO TABLE moviedata;
 
-## Problem Statements
+# Problem Statements
 
 1.Find the number of movies released between 1950 and 1960.
 
@@ -48,7 +47,7 @@ hive> SELECT name FROM moviedata > where rating > 3.0 and rating < 4.0;
 
 OUTPUT - # Long List of Movies
 
-4.** Find the number of movies with duration more than 2 hours (7200 second).**
+4.Find the number of movies with duration more than 2 hours (7200 second).
 
 hive> SELECTcount (*) FROM moviedata > WHERE duration > 7200;
 
@@ -66,8 +65,7 @@ hive> SELECT count (*) FROM moviedata;
 
 OUTPUT - 49590
 
-
-                                                SQOOP COMMANDS                                               
+# SQOOP COMMANDS                                               
 
 # Take data from MySQL DB to your HDFS using Sqoop
 sqoop import --connect jdbc:mysql://127.0.0.1:3306/movie -username root -password hortonworks1 -table movies_dataset -m 1 --target-di
