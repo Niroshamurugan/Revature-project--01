@@ -1,8 +1,24 @@
- ## Revature-project-01
-                                                                                  
+ # Movies Data Analysis
+ 
+ ## Project Description                                                                                 
 Use Sqoop to collect data and to store the data to HDFS. Process various insights while analyzing the data using Hive. The database consist of movies_dataset  table, I will import movies_dataset table, which contains about movies id, names, year, rating and duration. 
 
-## Movies analysis
+## Technologies Used
+* HADOOP
+* HDFS
+* HIVE
+* SQOOP
+* Hortonworks Sandbox
+* Ambari
+   
+ ## Description
+* Use Sqoop to collect data and to store the data to HDFS. Process various insights while analyzing the data using Hive. The database consist of movies_dataset  table, I will import movies_dataset table, which contains about movies id, names, year, rating and duration. 
+In this project 
+    * I collected the movies dataset from Data.World 
+    * Movie dataset contains 49590 rows and five columns.
+
+## Code
+
 ### Making a directory in HDFS
 
 hdfs dfs -mkdir '/moviedata/'
@@ -65,7 +81,7 @@ hive> SELECT count (*) FROM moviedata;
 
 OUTPUT - 49590
 
-## SQOOP COMMANDS                                               
+### SQOOP COMMANDS                                               
 
 ### Take data from MySQL DB to your HDFS using Sqoop
 sqoop import --connect jdbc:mysql://127.0.0.1:3306/movie -username root -password hortonworks1 -table movies_dataset -m 1 --target-di
@@ -77,4 +93,9 @@ limit 5;"
 
 ### List the tables in the movie database
 sqoop list-tables --connect jdbc:mysql://127.0.0.1:3306/movie --username root --password hortonworks1;
-     
+
+## Usage
+
+This project is used to find the highest rate of movie name's,how many movies released in particular year and how many movies are released per year there are lots og use cases i mentioned some of them.
+
+
