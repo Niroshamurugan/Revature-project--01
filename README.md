@@ -16,6 +16,7 @@ Use Sqoop to collect data and to store the data to HDFS. Process various insight
 ## Features
 
 List of features ready and TODOs for future development
+
 1.Find the number of movies released between 1950 and 1960.
 
 hive>SELECT count(*) FROM moviedata > WHERE year BETWEEN 1950 AND 1960;
