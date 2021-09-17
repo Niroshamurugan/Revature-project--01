@@ -62,10 +62,7 @@ OUTPUT - 49590
 * Download and insatll Hortonworks HDP 2.6.5.
 * Get everything up and runninng.
 * Connect to the system either through the webshell/OpenSSH/PuTTY.
-* Upload all the required files into the local system or clone this repo using the following command:-
-```
-git clone https://github.com/meenal-shree/Analysis-of-crime-against-women-in-India-using-HIVE-and-HADOOP
-```
+
 > For linux, install all the dependencies and then run the project from the command-line.
 
 ## Usage
